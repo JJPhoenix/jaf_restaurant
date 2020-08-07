@@ -1,6 +1,7 @@
 import jaf_home from "../view/jaf_home.vue";
 import jaf_nosotros from "../view/jaf_nosotros.vue";
 import jaf_reserva from "../view/jaf_reserva.vue";
+import jaf_blog from "../view/jaf_blog.vue";
 import Vue from "vue";
 import VueRouter from  "vue-router"
 
@@ -24,6 +25,10 @@ export default new VueRouter({
         {
             path: '/reserva',
             component: jaf_reserva
+        },
+        {
+            path: '/blog',
+            component: jaf_blog
         }
     ]
 })

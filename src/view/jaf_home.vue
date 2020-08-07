@@ -9,7 +9,7 @@
                         <b-button class="btn-init">Pide tu orden!</b-button>
                     </b-col>
                     <b-col cols="12" md="8">
-                        <img src="" alt="">
+
                     </b-col>
                 </b-row>
             </b-container>

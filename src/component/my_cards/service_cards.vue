@@ -1,41 +1,57 @@
 <template>
-    <div class="service">
-        <div class="service-logo">
-            <img src="" alt="logo">
-        </div>
-        <p class="tittle">{{title}}</p>
-        <p>
-            Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-            Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
-            when an unknown printer took a galley of type and scrambled it to make a type
-            specimen book. It has survived not only five centuries, but also the leap into
-            electronic typesetting, remaining essentially unchanged.
-        </p>
+    <div class="card_home" v-bind:class="type_card">
+        <h5>{{title_card}}</h5>
+        <p>{{des_card}}</p>
     </div>
 </template>
 
 <script>
     export default {
         name: "service_cards",
-        data: function (){
+        /*data: function (){
             return{
-                title: "Juan Javier"
+                title_card: "Juan Javier",
+                des_card: "Lorean ipsum dolor sit amet, consectetutr adipsicing elit."
             }
+        },*/
+        props:{
+            title_card: String,
+            des_card: String,
+            type_card: String
         }
     }
 </script>
 
 <style scoped lang="scss">
-    .service{
-        background: #fff;
-        padding : 30px;
+    .card_home{
+        width: 200px;
+        height: 230px;
+        display: inline-block;
         border-radius: 10px;
-        position: absolute;
-        bottom: 0;
+        padding: 15px 25px;
+        box-sizing: border-box;
+        cursor: pointer;
+        margin: 10px 15px;
+        background-image: url("~Img/card1.jpg");
+        background-position: center;
+        background-size: cover;
+        transition: transform 0.5s;
+
+        h5{
+            color: white;
+            font-weight: bold;
+        }
     }
-    .service-logo{
-        width: 130px;
-        height: 130px;
-        border-radius: ;
+    .card_home:hover{
+        transform: translateY(-10px);
+    }
+    .card_clean{
+        background-image: url("~Img/card1.jpg");
+    }
+    .card_delivery{
+        background-image: url("~Img/card2.png");
+    }
+    .card_keep{
+        background-image: url("~Img/card3.jpg");
     }
 </style>

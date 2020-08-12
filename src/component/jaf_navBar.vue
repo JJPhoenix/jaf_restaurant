@@ -3,7 +3,7 @@
         <b-navbar toggleable="lg" class="jaf_navbar" variant="primary" type="dark">
             <b-navbar-brand href="#" class="light">
                 <img src="src/asset/img/logo.png" class="nav-logo" alt="logo" />
-                JAF restaurant
+                JAF Restaurant
             </b-navbar-brand>
             <b-navbar-toggle target="nav-collapse"></b-navbar-toggle>
             <b-collapse id="nav-collapse" is-nav >

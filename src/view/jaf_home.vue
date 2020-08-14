@@ -6,7 +6,8 @@
                     <b-col cols="12" md="5">
                         <small>Bienvenido a nuestro restaurant</small>
                         <h1>JAF a la carta , es la primera WEB para restaurantes del mercado.</h1>
-                        <b-button class="btn-init">Pide tu orden!</b-button>
+                        <b-button class="btn-init"><router-link to="/reserva" class="router-link">Pide tu orden!</router-link></b-button>
+
                     </b-col>
                     <b-col cols="12" md="6" offset-md="1">
                         <card title_card="Nuevo sistema de delivery"
@@ -56,6 +57,10 @@
             margin-top: 2em;
             padding-right: 2em;
             padding-left: 2em;
+            .router-link{
+                text-decoration: none;
+                color: white;
+            }
         }
         .btn-init:hover{
             background: darkred;

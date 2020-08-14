@@ -1,7 +1,7 @@
 <template>
     <div class="header">
         <b-navbar toggleable="lg" class="jaf_navbar" variant="primary" type="dark">
-            <b-navbar-brand href="#" class="light">
+            <b-navbar-brand href="#" class="light" to="/home">
                 <img src="src/asset/img/logo.png" class="nav-logo" alt="logo" />
                 JAF Restaurant
             </b-navbar-brand>

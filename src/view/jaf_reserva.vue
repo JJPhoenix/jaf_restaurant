@@ -2,7 +2,8 @@
     <div>
         <function_reserva
                 title_card="Haz tu reserva"
-                tittle_sub="Reserva">
+                tittle_sub="Reserva"
+        des_card="Toda la reserva se confirmará por celular.">
             <form>
                 <p>(*)Se recomiendo llegar 5 minutos antes de su reserva.</p>
                 <p>(*)Se dara un tolerancia de 10 minutos.</p>

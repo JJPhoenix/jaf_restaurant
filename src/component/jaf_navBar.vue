@@ -9,7 +9,7 @@
             <b-collapse id="nav-collapse" is-nav >
                 <b-navbar-nav class="ml-auto text-right">
                     <b-nav-item><router-link to="/home" class="router-link">Home</router-link></b-nav-item>
-                    <!--<b-nav-item><router-link to="/nosotros" class="router-link">Nosotros</router-link></b-nav-item>-->
+                    <b-nav-item><router-link to="/nosotros" class="router-link">Nosotros</router-link></b-nav-item>
                     <b-nav-item><router-link to="/reserva" class="router-link">Reserva</router-link></b-nav-item>
                     <b-nav-item><router-link to="/blog" class="router-link">Blog</router-link></b-nav-item>
                 </b-navbar-nav>

@@ -3,6 +3,7 @@
         <div class="row justify-content-end card-pasos-numbers">
             <div class="col-4 text-right">
                 <p>{{tittle_sub}}</p>
+
             </div>
         </div>
         <div class="card-pasos-container">
@@ -15,6 +16,7 @@
                     <i class="fas fa-clipboard-list fa-3x "></i>
                     <span class="title-pasos response-pasos">{{title_card}}</span>
                 </div>
+                <p>{{des_card}}</p>
             </article>
 
             <article class="card-pasos-body">
@@ -29,7 +31,8 @@
         name: "function_card",
         props:{
             title_card: String,
-            tittle_sub: String
+            tittle_sub: String,
+            des_card:String
         }
     }
 </script>

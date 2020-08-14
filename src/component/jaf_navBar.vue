@@ -26,6 +26,7 @@
 </script>
 
 <style scoped lang="scss">
+    @import "src/asset/style/style";
     .header{
         .jaf_navbar{
             background: transparent !important;
@@ -41,7 +42,7 @@
                 content: '';
                 width: 0;
                 height: 2px;
-                background: yellow;
+                background: $color-primary;
                 display: block;
                 margin: auto;
                 transition: .5s;

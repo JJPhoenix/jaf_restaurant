@@ -8,12 +8,6 @@
 <script>
     export default {
         name: "service_cards",
-        /*data: function (){
-            return{
-                title_card: "Juan Javier",
-                des_card: "Lorean ipsum dolor sit amet, consectetutr adipsicing elit."
-            }
-        },*/
         props:{
             title_card: String,
             des_card: String,

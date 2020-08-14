@@ -10,25 +10,6 @@
                     </div>
                 </div>
             </div>
-            
-            <div class="blog-body pt-3">
-                <div class="row row-content">
-                    <div class="col-12 col-sm-4 order-sm-last col-md-3">
-                        <h3>Aperitivos y Piqueos deliciosos</h3>
-                    </div>
-                    <div class="col col-sm order-sm-first col-md">
-                        <div class="media">
-                            <img class="d-flex mr-3 img-thumbnail align-self-center" src="" alt="uthappizza">
-                            <div class="media-body">
-                                <h2 class="mt-0">Tequeños, Yuquitas, Sanguches y mas!<br> <span class="badge badge-pill badge-danger">Rico</span> <span class="badge badge-pill badge-warning">Rapido</span> <span class="badge badge-pill badge-warning">Facil de hacer</span> </h2>
-                                <p class="d-none d-sm-block">
-                                    
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
 
             <b-carousel
               id="carousel-1"
@@ -43,66 +24,72 @@
               @sliding-start="onSlideStart"
               @sliding-end="onSlideEnd"
             >
-            <!-- Text slides with image -->
-            <b-carousel-slide
-              caption="First slide"
-              text="Nulla vitae elit libero, a pharetra augue mollis interdum."
-              img-src="https://picsum.photos/1024/480/?image=52"
-            ></b-carousel-slide>
+            <!-- Slides with custom text -->
+            <b-carousel-slide img-src="https://tecnohotelnews.com/wp-content/uploads/2018/04/siete-claves-para-ofrecer-platos-saludables-atractivos-a-los-comensales-1280x720.jpg" class="img-fluid"> 
+              <h1> Come saludable y desde casa</h1>
+              <p>Aprende una receta saludable diaria en este cuarentena</p> 
+            </b-carousel-slide>
 
             <!-- Slides with custom text -->
-            <b-carousel-slide img-src="https://picsum.photos/1024/480/?image=54">
-              <h1>Hello world!</h1>
+            <b-carousel-slide img-src="https://www.infohostelero.com/wp-content/uploads/2018/04/colores-comida.jpg" class="img-fluid"> 
+              <h1>Agrega color, agrega alegría</h1>
+              <p>Conoce que verduras y vegetales no deben faltar en tus platos de comida</p> 
             </b-carousel-slide>
 
-            <!-- Slides with image only -->
-            <b-carousel-slide img-src="https://picsum.photos/1024/480/?image=58"></b-carousel-slide>
-
-            <!-- Slides with img slot -->
-            <!-- Note the classes .d-block and .img-fluid to prevent browser default image alignment -->
-            <b-carousel-slide>
-              <template v-slot:img>
-                <img
-                  class="d-block img-fluid w-100"
-                  width="1024"
-                  height="480"
-                  src="https://picsum.photos/1024/480/?image=55"
-                  alt="image slot"
-                >
-              </template>
+            <!-- Slides with custom text -->
+            <b-carousel-slide img-src="https://www.infohostelero.com/wp-content/uploads/2018/04/carta-restaurante.jpg" class="img-fluid"> 
+              <h1>Tendencia en las cartas culinarias</h1>
+              <p>Conoce las nuevas tendencias en platos a la carta con esta nueva normalidad</p> 
             </b-carousel-slide>
 
-            <!-- Slide with blank fluid image to maintain slide aspect ratio -->
-            <b-carousel-slide caption="Blank Image" img-blank img-alt="Blank image">
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse eros felis, tincidunt
-                a tincidunt eget, convallis vel est. Ut pellentesque ut lacus vel interdum.
-              </p>
-            </b-carousel-slide>
           </b-carousel>
-            
+
+          <div class="panel-blog pt-4">
+            <function_panel_blog title_card="Como el coronavirus está matando lentamente los restaurantes buffet en Estados Unidos" tittle_sub="Mundo" etiqueta_pb="Buffets">
+              <h1>Una experiencia culinaria amada por generaciones en Estados Unidos y otros países está en peligro por la pandemia de coronavirus: los buffets.</h1>
+              <img src="https://ichef.bbci.co.uk/news/660/cpsprodpb/9277/production/_113459473_gettyimages-1141644868.jpg" alt="" class="img-fluid">
+            </function_panel_blog>
+          </div>
+
+          <div class="panel-blog pt-4">
+            <function_panel_blog title_card="Los 10 mejores libros de cocina peruana" tittle_sub="Peru" etiqueta_pb="Recetas">
+              <h1>Aquí algunos de los mejores libros de cocina peruana que han sido reconocidos internacionalmente.</h1>
+              <img src="https://milrecetasperuanas.com/wp-content/uploads/2018/12/libros-de-cocina-peruana.jpg" alt="" class="img-fluid">
+            </function_panel_blog>
+          </div>
+
+          <div class="panel-blog pt-4 pb-4">
+            <function_panel_blog title_card="Coronavirus en Perú: ¿funciona el delivery durante la cuarentena?" tittle_sub="Peru" etiqueta_pb="Actualidad">
+              <h1>Sólo algunas empresas y aplicaciones de reparto a domicilio están funcionando durante el estado de emergencia.</h1>
+              <img src="https://peru.as.com/peru/imagenes/2020/03/29/tikitakas/1585503117_892562_1585503331_noticia_normal.jpg" alt="" class="img-fluid">
+            </function_panel_blog>
+          </div>
+
         </div>
 
 </template>
 
 <script>
+    import function_card from "../component/my_cards/function_card_pb.vue";
     export default {
-        name: "jaf_blog",
-        data() {
-      return {
-        slide: 0,
-        sliding: null
-      }
-    },
-    methods: {
-      onSlideStart(slide) {
-        this.sliding = true
+      name: "jaf_blog",
+          data() {
+        return {
+          slide: 0,
+          sliding: null
+        }
       },
-      onSlideEnd(slide) {
-        this.sliding = false
+      methods: {
+        onSlideStart(slide) {
+          this.sliding = true
+        },
+        onSlideEnd(slide) {
+          this.sliding = false
+        }
+      },
+      components:{
+        "function_panel_blog":function_card
       }
-    }
-        
     }
 </script>
 
@@ -119,10 +106,13 @@
             margin-bottom: 2em;
         }
         .blog-fondo{
-            background-image: url("~Img/fondo_blog.jpg");
             height: 10em;
-        }
-        
+        }     
+    }
+    .panel-blog{
+      h1{
+        font-size: 30px;
+      }
     }
 
 </style>
